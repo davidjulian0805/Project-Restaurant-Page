@@ -148,6 +148,4 @@ Project provided by:
 **The Odin Project**
 [https://www.theodinproject.com](https://www.theodinproject.com)
 
----
 
-If you want next, I can help you **set up image imports in Webpack properly (so your images actually load in the project)** — that’s usually where most people get stuck 👍
