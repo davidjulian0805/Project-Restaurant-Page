@@ -14,7 +14,7 @@ const loadMenuPage = () => {
 
   const categories = [
     {
-      category: "🥟 Siopao & Dimsum",
+      category: " Siopao & Dimsum",
       items: [
         { 
           name: "Fried Siopao (2pcs)", desc: "Lightly crisp, meaty-sarap filling", price: "₱75" 
@@ -34,7 +34,7 @@ const loadMenuPage = () => {
     },
 
     {
-      category: "🍜 Noodles & Rice",
+      category: " Noodles & Rice",
       items: [
         { 
           name: "Chowfan Solo", desc: "Classic Chinese-style fried rice", price: "₱89" 
@@ -50,9 +50,9 @@ const loadMenuPage = () => {
         },
       ],
     },
-    
+
     {
-      category: "🧋 Drinks & Desserts",
+      category: "Drinks & Desserts",
       items: [
         {
            name: "Halo-Halo Regular", desc: "Classic Filipino shaved ice dessert", price: "₱99"
