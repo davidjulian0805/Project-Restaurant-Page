@@ -64,52 +64,83 @@ nav button.active {
   color: #c0392b;
 }
 
-/* ── Hero Banner ── */
-.hero {
-  background-color: #c0392b;
-  color: white;
+/* ── Carousel ── */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateX(60px);
   display: flex;
-  align-items: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-slide.slide-exit {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.carousel-slide.slide-enter {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.carousel-slide.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image fills the whole carousel */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 80px 20px;
-  min-height: 400px;
+  gap: 8px;
+  z-index: 10;
 }
 
-.hero h1 {
-  font-size: 52px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-  color: white;
-}
-
-.hero p {
-  font-size: 20px;
-  max-width: 500px;
-  margin-bottom: 28px;
-  opacity: 0.92;
-}
-
-.hero-btn {
-  background-color: #f1c40f;
-  color: #333;
-  border: none;
-  padding: 14px 36px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
   cursor: pointer;
-  letter-spacing: 1px;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
-.hero-btn:hover {
-  background-color: #f39c12;
+.dot.active {
+  background-color: white;
 }
-
 /* ── Section below hero ── */
 .section-title {
   text-align: center;
@@ -264,39 +295,6 @@ footer {
   font-size: 14px;
 }
 
-/* ── Hero Badge ── */
-.hero-badge {
-  background-color: #f1c40f;
-  color: #333;
-  font-weight: bold;
-  font-size: 13px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 12px;
-  letter-spacing: 2px;
-}
-
-.hero-tagline {
-  font-size: 22px;
-  font-style: italic;
-  opacity: 0.9;
-  margin-bottom: 16px;
-}
-
-.hero-price {
-  background-color: rgba(255,255,255,0.15);
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-bottom: 24px;
-  color: white;
-}
-
-.hero-price strong {
-  font-size: 24px;
-  color: #f1c40f;
-}
 
 /* ── Category Title in Menu ── */
 .category-title {
@@ -308,82 +306,4 @@ footer {
   border-bottom: 2px solid #c0392b;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-/* ── Carousel ── */
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background-color: #000;
-}
-
-.carousel-slides {
-  position: relative;
-  width: 100%;
-  height: 480px;
-}
-
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  transform: translateX(60px);
-  display: flex;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.carousel-slide.slide-exit {
-  opacity: 0;
-  transform: translateX(-60px);
-}
-
-.carousel-slide.slide-enter {
-  opacity: 0;
-  transform: translateX(60px);
-}
-
-.carousel-slide.slide-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Image fills the whole carousel */
-.carousel-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Dots */
-.carousel-dots {
-  position: absolute;
-  bottom: 16px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  z-index: 10;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: white;
 }
